@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/app.min.css" />
+    <title>geo</title>
+    <script
+      defer
+      src="https://api-maps.yandex.ru/2.1/?apikey=f426f040-8c0b-4047-b99b-c70eef9b9d74&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrap">
+          <div class="header__logo">
+            <img src="img/geo_logo.svg" alt="логотип сайта" />
+            <h1 class="header__title">Геодезия на все случаи жизни</h1>
+          </div>
+          <div class="header__contacts">
+            <a href="tel:+7908211137">+7-908-211-13-72</a>
+            <a href="mailto:evgeniy_zhernakoff@mail.ru"
+              >evgeniy_zhernakoff@mail.ru</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="calculate">
+      <div class="container">
+        <h2 class="calculate__header">воспользуйтесь простой формой заявки</h2>
+        <form class="calculate__form" action="">
+          <div class="calculate__wrap">
+            <label for="work">Вид работ:</label>
+            <select name="work" id="work" size="1" class="work">
+              <option value="Определение координат границ участка">
+                Определение координат границ участка
+              </option>
+              <option value="Определение координат объекта">
+                Определение координат объекта
+              </option>
+              <option value="Вынос в натуру главных осей">
+                Вынос в натуру главных осей
+              </option>
+              <option value="Разметка фундамента">Разметка фундамента</option>
+              <option value="Другое">Другое</option>
+            </select>
+          </div>
+          <div class="calculate__wrap">
+            <label for="amount">Ваше имя:</label>
+            <input
+              name="amount"
+              id="amount"
+              placeholder="Введите ваше имя"
+              class="amount"
+            />
+          </div>
+          <div class="calculate__wrap">
+            <label for="phone">Ваш номер:</label>
+            <input
+              required
+              type="tel"
+              name="phone"
+              placeholder="+7XXXXXXXXXX"
+              class="phone"
+              pattern="^\+7[1-9]{10}$"
+            />
+          </div>
+          <button class="button_submit">Оставить заявку</button>
+        </form>
+      </div>
+    </section>
+    <div id="map"></div>
+  </body>
+</html>
